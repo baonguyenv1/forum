@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <setParameter name="IIS Web Application Name" value="Default Web Site/website_deploy" />
+  <setParameter name="umbracoDbDSN-Web.config Connection String" value="server=Dev8WIN\SQLEXPRESS;database=Dialogue;Trusted_Connection=True;;user id=sa;password=12345" />
+</parameters>
