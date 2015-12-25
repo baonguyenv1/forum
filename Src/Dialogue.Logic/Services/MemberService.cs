@@ -334,6 +334,11 @@ namespace Dialogue.Logic.Services
         public void RefreshMemberPosts(Member member, int amount)
         {
             var baseMember = _memberService.GetById(member.Id);
+            if (baseMember.ContentTypeAlias == "DialogueMember")
+            {
+                baseMember.Properties[AppConstants.PropMemberPostCount].Value = amount;
+                _memberService.Save(baseMember);
+            }
             baseMember.Properties[AppConstants.PropMemberPostCount].Value = amount;
             _memberService.Save(baseMember);
         }
